@@ -5,20 +5,31 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.pkl
 *.pickle
 *.joblib
 
-# Virtual environment
+# Allow .pkl for BEST MODEL ONLY
+!models/best_model.pkl
+
+# Ignore all other pickle/model files
+models/*.pkl
+
+# ===========================
+# Virtual environments
+# ===========================
 venv/
 ENV/
 env/
 .venv/
 
-# Jupyter
+# ===========================
+# Jupyter notebooks
+# ===========================
 .ipynb_checkpoints/
 
+# ===========================
 # Logs
+# ===========================
 *.log
 
 # ===========================
@@ -30,23 +41,8 @@ data/interim/
 data/temp/
 *.csv.zip
 
-# If you want even final dataset ignored (optional)
+# If you want to ignore even processed data (optional):
 # data/processed/final_user_dataset.csv
-
-# ===========================
-# Models
-# ===========================
-# If you DON'T want model file public:
-# models/best_model.pkl
-
-# If you DO want model file public for Streamlit:
-# (remove the line above)
-
-# Intermediary models
-models/*.pkl
-
-# Keep only BEST MODEL manually
-!models/best_model.pkl
 
 # ===========================
 # Streamlit Cloud
