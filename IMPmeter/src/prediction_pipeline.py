@@ -5,11 +5,13 @@ import sys
 import os
 
 # Make sure src is discoverable
-sys.path.append(os.path.dirname(__file__))
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))   # /src
+IMPMETER_DIR = os.path.abspath(os.path.join(CURRENT_DIR, ".."))
+sys.path.append(IMPMETER_DIR)
+sys.path.append(CURRENT_DIR)
 
 from feature_engineering import prepare_single_input
 from config import MODEL_PATH
-
 
 # =====================================================
 # LOAD MODEL ONE TIME (efficient for Streamlit)
@@ -25,7 +27,7 @@ except Exception as e:
 # =====================================================
 def predict_user_score(input_dict: dict):
     """
-    1) Takes raw input from the UI
+    1) Takes raw input from UI
     2) Converts into DataFrame
     3) Performs same feature engineering as training
     4) Runs ML model prediction
