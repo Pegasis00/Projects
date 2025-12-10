@@ -6,12 +6,16 @@ import os
 
 RANDOM_SEED = 42
 
+# Base directory of the project (IMPmeter folder)
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+# /IMPmeter
+
 # Paths
-RAW_DATA_DIR = "data/raw"
-PROCESSED_DATA_DIR = "data/processed"
+RAW_DATA_DIR = os.path.join(BASE_DIR, "data", "raw")
+PROCESSED_DATA_DIR = os.path.join(BASE_DIR, "data", "processed")
 FINAL_DATA_PATH = os.path.join(PROCESSED_DATA_DIR, "final_user_dataset.csv")
 
-MODEL_DIR = "models"
+MODEL_DIR = os.path.join(BASE_DIR, "models")
 MODEL_PATH = os.path.join(MODEL_DIR, "best_model.pkl")
 
 # Target column
