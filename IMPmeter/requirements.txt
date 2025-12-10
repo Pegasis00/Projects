@@ -1,12 +1,9 @@
+streamlit
 pandas
 numpy
 scikit-learn
-xgboost
+joblib
 lightgbm
-catboost
+xgboost
 matplotlib
 seaborn
-jupyter
-streamlit
-joblib
-shap
