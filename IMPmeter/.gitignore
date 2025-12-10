@@ -1,0 +1,68 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.joblib
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# ===========================
+# Data (DO NOT PUSH RAW DATA)
+# ===========================
+data/raw/
+data/raw_a2_fast/
+data/interim/
+data/temp/
+*.csv.zip
+
+# If you want even final dataset ignored (optional)
+# data/processed/final_user_dataset.csv
+
+# ===========================
+# Models
+# ===========================
+# If you DON'T want model file public:
+# models/best_model.pkl
+
+# If you DO want model file public for Streamlit:
+# (remove the line above)
+
+# Intermediary models
+models/*.pkl
+
+# Keep only BEST MODEL manually
+!models/best_model.pkl
+
+# ===========================
+# Streamlit Cloud
+# ===========================
+.streamlit/
+
+# ===========================
+# IDE Files
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===========================
+# OS Files
+# ===========================
+.DS_Store
+Thumbs.db
